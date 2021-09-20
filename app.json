@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "manga_reader",
+    "slug": "manga_reader",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "manga_reader"
+}
