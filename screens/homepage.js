@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { SearchBar } from 'react-native-elements';
+// import { SearchBar } from 'react-native-elements';
 import { uuid } from 'uuidv4';
 import { Text, StyleSheet, Button, View, FlatList, SafeAreaView, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 
 // import { scrap_it } from '../scrapper'
 // import { onepiece } from '../Data_Retriever/Onepiece'
+
+const Stack = createNativeStackNavigator();
 
 const Home = () => {
     //searchbar
