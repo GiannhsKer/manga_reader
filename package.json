@@ -1,32 +1,21 @@
 {
-  "main": "index.js",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
     "web": "expo start --web",
-    "start": "react-native start"
+    "eject": "expo eject"
   },
   "dependencies": {
-    "@react-navigation/native": "^6.0.2",
-    "@react-navigation/native-stack": "^6.1.0",
-    "axios": "^0.21.4",
-    "cheerio": "^1.0.0-rc.10",
+    "@react-navigation/native": "^6.0.6",
+    "@react-navigation/native-stack": "^6.2.5",
     "expo": "~42.0.1",
-    "expo-splash-screen": "~0.11.2",
     "expo-status-bar": "~1.0.4",
-    "expo-updates": "~0.8.1",
-    "node-fetch": "^3.0.0",
-    "react": "16.13.1",
+    "react": "^17.0.2",
     "react-dom": "16.13.1",
-    "react-native": "~0.63.4",
-    "react-native-elements": "^3.4.2",
-    "react-native-fs": "^2.18.0",
-    "react-native-gesture-handler": "~1.10.2",
-    "react-native-reanimated": "~2.2.0",
-    "react-native-screens": "~3.4.0",
-    "react-native-unimodules": "~0.14.5",
-    "react-native-web": "~0.13.12",
-    "uuidv4": "^6.2.12"
+    "react-native": "^0.66.1",
+    "react-native-web": "~0.13.12"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"
