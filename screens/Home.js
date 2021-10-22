@@ -1,13 +1,14 @@
 import React from 'react';
 import { Text, StyleSheet, Pressable, View, FlatList } from 'react-native';
 
+// local json για testing
 import data from '../Data/Mangas.json'
 
 const Home = ({ navigation }) => {
 
     return (
         <View style = {styles.container}>
-            <Text style = {styles.text}>Manga Reader</Text>
+            <Text style = {styles.text}>manga_reader</Text>
                 <View style = {styles.list}>
                     <FlatList
                         data={Object.keys(data)}

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-// import { v4 as uuid_v4 } from 'uuid';
+import React from 'react';
 import { Text, StyleSheet, View, FlatList, TouchableOpacity } from 'react-native';
 
-import data from '/home/yanes/Documents/manga_reader/Data/Mangas.json'
+// local json για testing
+import data from '../Data/Mangas.json'
 
 const Chapters = ({route}) => {
 
@@ -10,11 +10,13 @@ const Chapters = ({route}) => {
 
     return (
         <View style={styles.container}>
-            <Text style = {styles.title}>Manga Reader</Text>
+            <Text style = {styles.title}>manga_reader</Text>
             <Text style = {styles.manga_title}> {route.params}</Text>
             <View style={styles.itemslist}>
                 { vols.map(vol => (
-                    <Text style = {styles.box}>{ vol }</Text>
+                    <TouchableOpacity>
+                        <Text style = {styles.box}>{ vol }</Text>
+                    </TouchableOpacity>
                 )) }
             </View>
         </View>

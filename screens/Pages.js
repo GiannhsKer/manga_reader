@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Image } from 'react-native';
 
-const Display = () => {
+const Pages = () => {
 
     const pages = "https://i.ibb.co/J7mMmbR/one-piece-1003-1.jpg"
 
@@ -18,7 +18,7 @@ const Display = () => {
 
 const styles = StyleSheet.create({
     container: {
-        display: 'flex',
+        // display: 'flex',
         flex: 1,
         backgroundColor: 'black',
     },
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Display;
+export default Pages;
