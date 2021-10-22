@@ -11,9 +11,9 @@ const Home = ({ navigation }) => {
                 <View style = {styles.list}>
                     <FlatList
                         data={Object.keys(data)}
+                        keyExtractor = {item => item}
                         renderItem={({ item }) => (
-                            <Pressable onPress={() => navigation.navigate('Chapters',item
-                            )}>
+                            <Pressable onPress={() => navigation.navigate('Chapters',item)}>
                                 <Text style={styles.item}>{item}</Text>
                             </Pressable>
                         )}
