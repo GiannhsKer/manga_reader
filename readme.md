@@ -1,8 +1,8 @@
 # manga_reader 
 An Android/iOS app displaying a collection of mangas written in Javascript(React-Native), and the scrappers also in Javascript(Nodejs) .
 
-<img src="/Screenshots/manga_reader(1).png" alt="screenshot1" width="250"/>
-<img src="/Screenshots/manga_reader(2).png" alt="screenshot2" width="250"/>
+<img src="/Screenshots/manga_reader(1).png" alt="screenshot1" width="250"/> |
+<img src="/Screenshots/manga_reader(2).png" alt="screenshot2" width="250"/> |
 <img src="/Screenshots/manga_reader(3).png" alt="screenshot3" width="250"/>
 
 
