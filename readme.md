@@ -1,5 +1,5 @@
 # manga_reader 
-An Android/iOS app displaying a collection of mangas written in Javascript(React-Native), and the scrappers also in Javascript(Nodejs) .
+An Android/iOS app displaying a collection of mangas written in Javascript(React-Native). The scrappers are also written in Javascript(Nodejs) .
 
 
 <p float="left">
@@ -9,13 +9,15 @@ An Android/iOS app displaying a collection of mangas written in Javascript(React
 </p>
 
 
-### How to run it
+### How to run it locally
 
 1. Install nodejs, npm, yarn, expocli, 
 2. ( Optional ) Install vscode, git 
 3. Clone repository from terminal / from github.com
 4. In the project folder, open terminal and run 
+
 ```$ expo start --web ``` to run it in the browser or
+
 ```$ expo start ``` to see your other options
 
 ### Tasks

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text, StyleSheet, View, FlatList, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, View, FlatList, TouchableOpacity, Pressable } from 'react-native';
 
-// local json για testing
+// local json for testing
 import data from '../Data/Mangas.json'
 
-const Chapters = ({route}) => {
+const Chapters = ({navigation, route}) => {
 
     const vols = Object.keys(data[route.params]) 
 
@@ -15,7 +15,9 @@ const Chapters = ({route}) => {
             <View style={styles.itemslist}>
                 { vols.map(vol => (
                     <TouchableOpacity>
-                        <Text style = {styles.box}>{ vol }</Text>
+                        <Pressable onPress={() => navigation.navigate('Display',data[route.params][vol])}>
+                            <Text style = {styles.item}>{ vol }</Text>
+                        </Pressable>
                     </TouchableOpacity>
                 )) }
             </View>
@@ -44,13 +46,11 @@ const styles = StyleSheet.create({
         marginTop: 50,
     },
     itemslist: {
-        // marginTop: 50,
-        flexDirection: 'row',
+        flexDirection: 'row-reverse',
         justifyContent: 'space-between',
-        flexWrap:"wrap",
-        padding: 10,
+        flexWrap:"wrap-reverse",
     },
-    box: {
+    item: {
       marginTop: 20,
       fontSize: 20,
       backgroundColor: 'lightblue',
