@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { ActivityIndicator, StyleSheet, ScrollView, Image, Text } from 'react-native';
+import { ActivityIndicator, StyleSheet, ScrollView, Image } from 'react-native';
 
 const Display = ({route}) => {
 
@@ -28,13 +28,13 @@ const Display = ({route}) => {
     }, []);
 
     return (
-        <ScrollView style={styles.container}>
-            {isLoading ? <ActivityIndicator/> : (
-                data.map(page=>(
-                    <Image style={styles.page} source={{uri: page}}></Image>
-                ))
-            )}
-        </ScrollView>
+      <ScrollView style={styles.container}>
+          {isLoading ? <ActivityIndicator/> : (
+            data.map(page=>(
+              <Image style={styles.page} source={{uri: page}}></Image>
+            ))
+          )}
+      </ScrollView>
     );
 }
 
