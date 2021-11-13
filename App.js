@@ -5,8 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './screens/Home'
 import Display from './screens/Display'
 import Chapters from './screens/Chapters'
-
-// import Sandbox from './screens/sandbox.js'
+// import Sandbox from './screens/Sandbox';
 
 const Stack = createNativeStackNavigator();
 

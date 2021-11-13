@@ -1,12 +1,12 @@
 {
   "expo": {
     "name": "manga_reader",
-    "slug": "manga_reader",
+    "slug": "m_r",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/manga_reader.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/manga_reader.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,16 +17,18 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "mrios"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.giannhsker.manga_reader"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/manga_reader.png"
     }
   }
 }

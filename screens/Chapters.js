@@ -1,60 +1,64 @@
 import React from 'react';
-import { Text, StyleSheet, View, FlatList, TouchableOpacity, Pressable } from 'react-native';
+import { Text, StyleSheet, View, TouchableOpacity, Pressable, ScrollView } from 'react-native';
 
-// local json for testing
-import data from '../Data/Mangas.json'
 
 const Chapters = ({navigation, route}) => {
 
-    const vols = Object.keys(data[route.params]) 
+    var chapters_boxes = []
+    
+    for(var i = 0; i <= route.params.chapters; i++){
+        chapters_boxes.push(i)
+    }
 
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <Text style = {styles.title}>manga_reader</Text>
-            <Text style = {styles.manga_title}> {route.params}</Text>
+            <Text style = {styles.manga_title}> {route.params.title}</Text>
             <View style={styles.itemslist}>
-                { vols.map(vol => (
+                {chapters_boxes.map(chapter =>(
                     <TouchableOpacity>
-                        <Pressable onPress={() => navigation.navigate('Display',data[route.params][vol])}>
-                            <Text style = {styles.item}>{ vol }</Text>
+                        <Pressable onPress = {() => navigation.navigate('Display',{ 'title' : route.params.title, 'chapter' : chapter })}>
+                            <Text style={styles.volume}>{chapter}</Text>
                         </Pressable>
                     </TouchableOpacity>
-                )) }
+                ))}
             </View>
-        </View>
-        
+        </ScrollView>
     );
 }
 
+// alignText not working on android
 const styles = StyleSheet.create({
     container: {
-        height:"100",
-        width: "100",
+        flex:1,
         backgroundColor: 'black',
     },
     title: {
-        textAlign: 'center',
+        alignSelf: 'center',
         color: 'white',
         fontSize: 35,
         marginTop: 50,
     },
     manga_title:{
-        textAlign: 'flex-start',
-        marginLeft: 30,
+        alignSelf: 'center',
         color: 'red',
-        fontSize: 35,
-        marginTop: 50,
+        fontSize: 20,
+        marginTop: 20,
     },
     itemslist: {
+        marginTop:50,
         flexDirection: 'row-reverse',
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
         flexWrap:"wrap-reverse",
     },
-    item: {
-      marginTop: 20,
-      fontSize: 20,
-      backgroundColor: 'lightblue',
-      padding: 10,
+    volume: {
+        width:70,
+        marginTop: 20,
+        fontSize: 20,
+        backgroundColor: 'lightblue',
+        padding: 10,
+        clipPath: `inset(0 0 0 0 round 5% 5% 5% 5%)`
+
     }
 });
 
