@@ -17,7 +17,6 @@ An Android app displaying a collection of mangas. The app is written in Javascri
 4. To start the server, move into /server and run
 
 ```$ yarn run dev ``` 
-
 4. You are ready to go, in the project folder, open terminal and run 
 ```$ expo start --web ``` to run from browser or
 ```$ expo start ``` to see your other options
