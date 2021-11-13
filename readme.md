@@ -13,17 +13,17 @@ An Android app displaying a collection of mangas. The app is written entirely in
 2. ( Optional ) Install vscode, git 
 3. Download the repository
 4. Install latest version of packages by running
-```$ yarn install ``` 
+```$ yarn install``` 
 4. To start the server, move into /server directory and run
-```$ yarn run dev ``` 
+```$ yarn run dev``` 
 4. You are ready to go, in the project folder, open terminal and run 
-```$ expo start --web ``` to run from browser or
-```$ expo start ``` to see your other options
+```$ expo start --web``` to run from browser or
+```$ expo start``` to see your other options
 
 
 
 ### Tasks
 * Prettier UI, change of fonts, buttons etc.
-* Write scrappers for more mangas (update server/scrappers.js by writing more functions)
+* Write scrappers for more mangas (update server/scrappers.js by adding more functions)
 * Gestures, to be able to change pages by swiping (Display.js)
 * Any other ideas are wellcomed 

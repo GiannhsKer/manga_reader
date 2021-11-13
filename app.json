@@ -22,7 +22,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/manga_reader.png",
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.giannhsker.manga_reader"
