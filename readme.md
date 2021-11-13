@@ -1,5 +1,5 @@
 # manga_reader 
-An Android app displaying a collection of mangas. The app is written in Javascript(React-Native), and the backend also in Javascript (Nodejs).
+An Android app displaying a collection of mangas. The app is written entirely in Javascript, frontend is in React-Native, and the backend in Nodejs.
 
 <p float="left">
     <img src="/Screenshots/manga_reader Home.png" alt="screenshot1" width="250"/>
@@ -11,10 +11,10 @@ An Android app displaying a collection of mangas. The app is written in Javascri
 
 1. Install nodejs, npm, yarn , expocli.
 2. ( Optional ) Install vscode, git 
-3. Download repository
+3. Download the repository
 4. Install latest version of packages by running
 ```$ yarn install ``` 
-4. To start the server, move into /server and run
+4. To start the server, move into /server directory and run
 ```$ yarn run dev ``` 
 4. You are ready to go, in the project folder, open terminal and run 
 ```$ expo start --web ``` to run from browser or
@@ -24,7 +24,6 @@ An Android app displaying a collection of mangas. The app is written in Javascri
 
 ### Tasks
 * Prettier UI, change of fonts, buttons etc.
-* Write scrappers for more mangas (server/scrappers)
-* Change View to FlatList (Chapters.js)
+* Write scrappers for more mangas (update server/scrappers.js by writing more functions)
 * Gestures, to be able to change pages by swiping (Display.js)
-* Any other idea for change is accepted 
+* Any other ideas are wellcomed 
