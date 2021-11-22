@@ -1,5 +1,5 @@
 # manga_reader 
-An Android app displaying a collection of mangas. The app is written entirely in Javascript, frontend is in React-Native, and the backend in Nodejs.
+An Android app displaying a collection of mangas. The project consists of an android app and a server, both written in Javascript, React-Native and Nodejs respectively.
 
 <p float="left">
     <img src="/Screenshots/manga_reader Home.png" alt="screenshot1" width="250"/>
@@ -24,6 +24,6 @@ An Android app displaying a collection of mangas. The app is written entirely in
 
 ### Tasks
 * Prettier UI, change of fonts, buttons etc.
-* Write scrappers for more mangas (update server/scrappers.js by adding more functions)
+* Add scrappers for more mangas (update server/scrappers.js by adding more functions)
 * Gestures, to be able to change pages by swiping (Display.js)
-* Any other ideas are wellcomed 
+* Any other ideas are welcome

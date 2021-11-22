@@ -13,7 +13,7 @@ const Display = ({route}) => {
   
     const getMangas = () => {
       try {
-        fetchData(`http://localhost:5000/${route.params.title}/${route.params.chapter}`).then((data) => {
+        fetchData(`https://mangareader3.herokuapp.com/${route.params.title}/${route.params.chapter}`).then((data) => {
           setData(data);
           setLoading(false);
         });
