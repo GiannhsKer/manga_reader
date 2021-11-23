@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, StyleSheet, View, TouchableOpacity, Pressable, ScrollView } from 'react-native';
+import { Text, StyleSheet, View, Pressable, ScrollView } from 'react-native';
+import uuid from 'react-native-uuid';
 
 
 const Chapters = ({navigation, route}) => {
@@ -16,11 +17,9 @@ const Chapters = ({navigation, route}) => {
             <Text style = {styles.manga_title}> {route.params.title}</Text>
             <View style={styles.itemslist}>
                 {chapters_boxes.map(chapter =>(
-                    <TouchableOpacity>
-                        <Pressable onPress = {() => navigation.navigate('Display',{ 'title' : route.params.title, 'chapter' : chapter })}>
-                            <Text style={styles.volume}>{chapter}</Text>
-                        </Pressable>
-                    </TouchableOpacity>
+                    <Pressable key = {uuid.v4()} onPress = {() => navigation.navigate('Display',{ 'title' : route.params.title, 'chapter' : chapter })}>
+                        <Text style={styles.volume}>{chapter}</Text>
+                    </Pressable>
                 ))}
             </View>
         </ScrollView>

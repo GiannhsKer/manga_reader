@@ -1,5 +1,6 @@
 import React,{ useEffect, useState } from 'react';
 import { ActivityIndicator, Text, StyleSheet, Pressable, View, ScrollView } from 'react-native';
+import uuid from 'react-native-uuid';
 
 const Home = ({ navigation }) => {
 
@@ -34,7 +35,7 @@ const Home = ({ navigation }) => {
       <View style={styles.itemslist}>
         {isLoading ? <ActivityIndicator/> : (
           Object.keys(data).map( (manga,index) => (
-            <Pressable style = {styles.box} onPress={() => navigation.navigate('Chapters',{ 'title' : manga, 'chapters' : Object.values(data)[index]})}>
+            <Pressable key = {uuid.v4()} style = {styles.box} onPress={() => navigation.navigate('Chapters',{ 'title' : manga, 'chapters' : Object.values(data)[index]})}>
               <Text style = {{fontSize:20, alignSelf:'flex-start'}} >{manga}</Text>
               <Text style = {{fontSize:15, alignSelf:'flex-end'}} >latest chapter : {Object.values(data)[index]}</Text>
             </Pressable>
