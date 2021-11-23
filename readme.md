@@ -12,18 +12,13 @@ An Android app displaying a collection of mangas. The project consists of an and
 1. Install nodejs, npm, yarn , expocli.
 2. ( Optional ) Install vscode, git 
 3. Download the repository
-4. Install latest version of packages by running
-```$ yarn install``` 
-4. To start the server, move into /server directory and run
-```$ yarn run dev``` 
-4. You are ready to go, in the project folder, open terminal and run 
+4. You are ready to go, in the project folder open terminal and run 
 ```$ expo start --web``` to run from browser or
 ```$ expo start``` to see your other options
 
 
-
 ### Tasks
-* Prettier UI, change of fonts, buttons etc.
+
+* Add more activity indicators ( waiting wheel ) etc.
 * Add scrappers for more mangas (update server/scrappers.js by adding more functions)
-* Gestures, to be able to change pages by swiping (Display.js)
 * Any other ideas are welcome

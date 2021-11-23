@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "manga_reader",
-    "slug": "m_r",
+    "slug": "mreader",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/manga_reader.png",
@@ -18,7 +18,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "mrios"
+      "bundleIdentifier": "mreaderios"
     },
     "android": {
       "adaptiveIcon": {

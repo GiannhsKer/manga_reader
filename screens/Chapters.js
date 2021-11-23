@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         backgroundColor: 'lightblue',
         padding: 10,
-        clipPath: `inset(0 0 0 0 round 5% 5% 5% 5%)`
+        borderRadius: 10
 
     }
 });

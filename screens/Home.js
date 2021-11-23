@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     padding: 15,
     marginTop: 20,
     marginHorizontal:30,
-    clipPath: `inset(0 0 0 0 round 5% 5% 5% 5%)`
+    borderRadius: 10
   }
 });
 

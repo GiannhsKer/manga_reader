@@ -1,7 +1,8 @@
 import React, {useState, useEffect } from 'react';
 import { ActivityIndicator, StyleSheet, ScrollView, Image, Modal } from 'react-native';
+// import uuid from 'react-native-uuid';
 import GallerySwiper from "react-native-gallery-swiper";
-import ImageViewer from 'react-native-image-zoom-viewer';
+// import ImageViewer from 'react-native-image-zoom-viewer';
 
 const Display = ({route}) => {
 
@@ -16,8 +17,8 @@ const Display = ({route}) => {
     const getScans = () => {
       try {
         fetchData(`https://mangareader3.herokuapp.com/${route.params.title}/${route.params.chapter}`).then((data) => {
-          setData(data);
-          setLoading(false);
+			setData(data);
+			setLoading(false);
         });
       } catch (error) {
         console.error(error);
@@ -39,8 +40,9 @@ const Display = ({route}) => {
 }
 
 // GallerySwiper
+
 	// <GallerySwiper
-	// 	images={mangass}
+	// 	images={data}
 	// 	sensitiveScroll={true}
 	// 	initialNumToRender={20}
 	// />
@@ -49,19 +51,19 @@ const Display = ({route}) => {
 
 //     <Modal>
 //         <ImageViewer 
-//           imageUrls={mangass}
+//           imageUrls={data}
 //         />
 //     </Modal>
 
 // ScrollView without zoom
 
-//       <ScrollView style={styles.container}>
-//         {isLoading ? <ActivityIndicator/> : (
-//           data.map(page=>(
-// 				<Image key = {uuid.v4()} style={styles.page} source={{uri: page}}></Image>
-//           ))
-//         )}
-//     	</ScrollView>
+// <ScrollView style={styles.container}>
+// {isLoading ? <ActivityIndicator/> : (
+//   Object.keys(data).map(page=>(
+// 		<Image key = {uuid.v4()} style={styles.page} source={{uri : data[page]['url']}} ></Image>
+// 	))
+// )}
+// </ScrollView> 
 
 const styles = StyleSheet.create({
     container: {
