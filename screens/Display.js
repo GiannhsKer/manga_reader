@@ -1,8 +1,8 @@
 import React, {useState, useEffect } from 'react';
-import { ActivityIndicator, StyleSheet, ScrollView, Image, Modal } from 'react-native';
+import { ScrollView, StyleSheet, Modal } from 'react-native';
 // import uuid from 'react-native-uuid';
-import GallerySwiper from "react-native-gallery-swiper";
-// import ImageViewer from 'react-native-image-zoom-viewer';
+// import GallerySwiper from "react-native-gallery-swiper";
+import ImageViewer from 'react-native-image-zoom-viewer';
 
 const Display = ({route}) => {
 
@@ -31,11 +31,13 @@ const Display = ({route}) => {
     }, []);
 
     return (
-		<GallerySwiper
-			images={data}
-			sensitiveScroll={true}
-			initialNumToRender={20}
-		/>
+      <ScrollView style={styles.container}>
+        <Modal>
+            <ImageViewer 
+              imageUrls={data}
+            />
+        </Modal>
+    </ScrollView>
 	);
 }
 
