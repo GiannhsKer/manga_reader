@@ -12,7 +12,7 @@ An Android app displaying a collection of mangas. The project consists of an and
 1. Install nodejs, npm, yarn , expocli.
 2. ( Optional ) Install vscode, git 
 3. Download the repository
-4. You are ready to go, in the project folder open terminal and run 
+4. You are ready to go, open terminal in the project folder and run 
 ```$ expo start --web``` to run from browser or
 ```$ expo start``` to see your other options
 
