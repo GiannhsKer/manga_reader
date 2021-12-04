@@ -1,27 +1,46 @@
-import React from 'react';
-import { Text, StyleSheet, View, Pressable, ScrollView } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { ActivityIndicator, Text, StyleSheet, View, Pressable, ScrollView } from 'react-native';
 import uuid from 'react-native-uuid';
 
 
 const Chapters = ({navigation, route}) => {
-
-    var chapters_boxes = []
-    
-    for(var i = 0; i <= route.params.chapters; i++){
-        chapters_boxes.push(i)
-    }
-
-    return (
+	
+	const [isLoading, setLoading] = useState(true);
+	const [data, setData] = useState();
+  
+	const fetchData = async (url) => {
+	  const response = await fetch(url);
+	  return response.json();
+	};
+  
+	const getMangas = () => {
+	  try {
+		fetchData(`https://mangareader3.herokuapp.com/${route.params.manga}`).then((data) => {
+		  setData(data);
+		  setLoading(false);
+		});
+	  } catch (error) {
+		console.error(error);
+	  }
+	};
+  
+	useEffect(() => {
+	  getMangas();
+	}, []);
+	
+	return (
         <ScrollView style={styles.container}>
-            <Text style = {styles.title}>manga_reader</Text>
-            <Text style = {styles.manga_title}> {route.params.title}</Text>
-            <View style={styles.itemslist}>
-                {chapters_boxes.map(chapter =>(
-                    <Pressable key = {uuid.v4()} onPress = {() => navigation.navigate('Display',{ 'title' : route.params.title, 'chapter' : chapter })}>
-                        <Text style={styles.volume}>{chapter}</Text>
-                    </Pressable>
-                ))}
-            </View>
+             <Text style = {styles.title}>manga_reader</Text>
+             <Text style = {styles.manga_title}> {route.params.manga}</Text>
+             <View style={styles.itemslist}>
+				{isLoading ? <ActivityIndicator/> : (
+					Object.keys(data).map( chapter => (
+						<Pressable key = {uuid.v4()} onPress = {() => navigation.navigate('Display',{'title' : route.params.manga, 'href' : chapter })}>
+							<Text style={styles.volume}>{chapter}</Text>
+						</Pressable>
+					))
+				)}
+             </View>
         </ScrollView>
     );
 }

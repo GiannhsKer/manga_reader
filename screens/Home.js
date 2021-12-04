@@ -14,7 +14,7 @@ const Home = ({ navigation }) => {
 
   const getMangas = () => {
     try {
-      fetchData("https://mangareader3.herokuapp.com/").then((data) => {
+      fetchData("https://mangareader3.herokuapp.com").then((data) => {
         setData(data);
         setLoading(false);
       });
@@ -29,15 +29,13 @@ const Home = ({ navigation }) => {
   }, []);
 
   return (
-
     <ScrollView style = {styles.container}>
       <Text style = {styles.title}>manga_reader</Text>
       <View style={styles.itemslist}>
         {isLoading ? <ActivityIndicator/> : (
-          Object.keys(data).map( (manga,index) => (
-            <Pressable key = {uuid.v4()} style = {styles.box} onPress={() => navigation.navigate('Chapters',{ 'title' : manga, 'chapters' : Object.values(data)[index]})}>
+          data.map( manga => (
+            <Pressable key = {uuid.v4()} style = {styles.manga} onPress={() => navigation.navigate('Chapters',{ 'manga' : manga } )}>
               <Text style = {{fontSize:20, alignSelf:'flex-start'}} >{manga}</Text>
-              <Text style = {{fontSize:15, alignSelf:'flex-end'}} >latest chapter : {Object.values(data)[index]}</Text>
             </Pressable>
           ))
         )}
@@ -61,13 +59,13 @@ const styles = StyleSheet.create({
   itemslist: {
     marginTop:50,
   },
-  box:{
+  manga : {
     height:80,
     width:200,
     alignSelf: 'flex-start',
     justifyContent: 'center',
     backgroundColor: 'lightblue',
-    padding: 15,
+    padding: 10,
     marginTop: 20,
     marginHorizontal:30,
     borderRadius: 10
