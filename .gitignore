@@ -86,7 +86,7 @@ lint/tmp/
 node_modules
 
 #my files
-./.expo
-./.expo.shared
+.expo
+.expo.shared
 yarn.lock
-./Scrappers (unused)
+Scrappers (unused)
