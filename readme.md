@@ -19,6 +19,6 @@ An Android app displaying a collection of mangas. The project consists of an and
 
 ### Tasks
 
-* Add more activity indicators ( loading wheel ) etc.
+* Add animated loading indicators
+* Any suggestions are welcome
 * Add scrappers for more mangas (update server/scrappers.js by adding more functions)
-* Any other ideas are welcome
