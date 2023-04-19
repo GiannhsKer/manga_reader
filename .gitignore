@@ -87,6 +87,8 @@ node_modules
 
 #my files
 .expo
-.expo.shared
+.expo-shared
 yarn.lock
 Scrappers (unused)
+babel.config.js
+package.json
