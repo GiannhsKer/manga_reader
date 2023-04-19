@@ -84,3 +84,9 @@ lint/outputs/
 lint/tmp/
 # lint/reports/
 node_modules
+
+#my files
+./.expo
+./.expo.shared
+yarn.lock
+./Scrappers (unused)
